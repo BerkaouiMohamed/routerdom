@@ -9,9 +9,11 @@ function Navigator() {
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav className="me-auto " style={{display:'flex',gap:'30px'}}>
             <Link to="/">Home</Link>
-            <Link to="/products">Features</Link>
+            <Link to="/products">Products</Link>
+            <Link to="/login">login</Link>
+
           </Nav>
         </Container>
       </Navbar>
