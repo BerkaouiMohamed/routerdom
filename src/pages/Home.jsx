@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Cart from '../components/Cart'
 import useHomeProducts from '../custemHooks/useHomeProducts'
+import {motion } from 'framer-motion'
 const homeStyle = {
     display: 'flex',
     flexWrap: 'wrap',
@@ -11,12 +12,12 @@ function Home() {
 const products=useHomeProducts()
 
   return (
-    <div style={homeStyle}>
+    <motion.div  style={homeStyle} >
        {products.map((product)=>{
         return <Cart >{product}</Cart>
        })}
       
-    </div>
+    </motion.div>
   )
 }
 

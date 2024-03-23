@@ -8,7 +8,7 @@ function useFetchSingleProduct(id) {
         .then(res=>res.json())
         .then(json=>setProduct(json))
         .catch((e)=>console.log(e))
-     },[id])
+     },[])
   return (
    product
   )

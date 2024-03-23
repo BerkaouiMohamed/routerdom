@@ -9,10 +9,10 @@ function SingelProduct() {
     const location=useLocation()
 
     function nav(){
-        navigate(-1)
+        navigate("/sqdqsd")
     }
   return (
-    <div>
+    <div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
  <h1>{product?.title}</h1> 
 <button onClick={nav}>back</button>
 

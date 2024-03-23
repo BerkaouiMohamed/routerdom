@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import useFetchProducts from '../custemHooks/useFetchProducts'
 import Cart from '../components/Cart'
+import {motion } from 'framer-motion'
+import { productsStore } from '../ContextProducts'
+
 const homeStyle = {
     display: 'flex',
     flexWrap: 'wrap',
     gap:'40px'
 }
 function Products() {
-    const products=useFetchProducts()
+const products=useContext( productsStore)
   return (
-    <div style={homeStyle}>
+    <motion.div  style={homeStyle}>
     {products.map((product)=>{
      return <Cart >{product}</Cart>
     })}
    
- </div>
+ </motion.div>
   )
 }
 
